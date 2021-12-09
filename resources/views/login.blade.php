@@ -4,7 +4,8 @@
 <div class="container custom-login">
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
-            <form>
+            <form action="/login" method="POST">
+                @csrf
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" placeholder="Email" name="email">
