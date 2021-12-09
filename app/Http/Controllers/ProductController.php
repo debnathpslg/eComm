@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -17,6 +18,7 @@ class ProductController extends Controller
         // } else {
         //     return "Welcome to Product Dashboard, but no sessions exists.";
         // }
-        return "Welcome to Product Dashboard";
+        $data = Product::all();
+        return view('product', ['products' => $data]);
     }
 }
