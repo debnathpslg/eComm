@@ -17,11 +17,13 @@
                 @php ($i=0)
                 @foreach ($products as $item)
                 <div class="item {{($i == 0) ? 'active' : ''}}">
-                    <img src="{{asset('/storage/images/'.$item['gallery'])}}" alt="{{$item['name']}}" class="slider-img">
-                    <div class="carousel-caption slider-text">
-                        <h3>{{$item['name']}}</h3>
-                        <p>{{$item['description']}}</p>
-                    </div>
+                    <a href="detail/{{$item['id']}}">
+                        <img src="{{asset('/storage/images/'.$item['gallery'])}}" alt="{{$item['name']}}" class="slider-img">
+                        <div class="carousel-caption slider-text">
+                            <h3>{{$item['name']}}</h3>
+                            <p>{{$item['description']}}</p>
+                        </div>
+                    </a>
                 </div>
                 @php ($i++)
                 @endforeach
@@ -43,10 +45,12 @@
             @php ($i=0)
             @foreach ($products as $item)
             <div class="trending-item">
-                <img src="{{asset('/storage/images/'.$item['gallery'])}}" alt="{{$item['name']}}" class="trending-image">
-                <div class="">
-                    <h3>{{$item['name']}}</h3>
-                </div>
+                <a href="detail/{{$item['id']}}">
+                    <img src="{{asset('/storage/images/'.$item['gallery'])}}" alt="{{$item['name']}}" class="trending-image">
+                    <div class="">
+                        <h3>{{$item['name']}}</h3>
+                    </div>
+                </a>
             </div>
             @php ($i++)
             @endforeach
