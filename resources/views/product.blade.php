@@ -17,7 +17,7 @@
                 @php ($i=0)
                 @foreach ($products as $item)
                 <div class="item {{($i == 0) ? 'active' : ''}}">
-                    <img src="{{$item['gallery']}}" alt="{{$item['name']}}" class="slider-img">
+                    <img src="{{asset('/storage/images/'.$item['gallery'])}}" alt="{{$item['name']}}" class="slider-img">
                     <div class="carousel-caption slider-text">
                         <h3>{{$item['name']}}</h3>
                         <p>{{$item['description']}}</p>

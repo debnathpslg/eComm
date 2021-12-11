@@ -16,11 +16,41 @@ class prod_seeder extends Seeder
     {
         //
         DB::table('products')->insert([
-            'name' => 'Oppo Mobile',
-            'price' => '300',
-            'category' => 'Mobile',
-            'description' => 'A smartphone with 8Gb Ram and much more.',
-            'gallery' => 'https://opsg-img-cdn-gl.heytapimg.com/epb/202105/20/NKRrMfP4jArloOQz.png',
+            [
+                'name' => 'LG Mobile',
+                'price' => '200',
+                'category' => 'Mobile',
+                'description' => 'Some Description.',
+                'gallery' => 'lg-m.png',
+            ],
+            [
+                'name' => 'Sony Television',
+                'price' => '300',
+                'category' => 'Television',
+                'description' => 'Some Description.',
+                'gallery' => 'sony-tv.png',
+            ],
+            [
+                'name' => 'Samsung Refridgerator',
+                'price' => '400',
+                'category' => 'Refridgerator',
+                'description' => 'Some Description.',
+                'gallery' => 'samsung-r.png',
+            ],
+            [
+                'name' => 'IFB Washing Machine',
+                'price' => '500',
+                'category' => 'Washing Machine',
+                'description' => 'Some Description.',
+                'gallery' => 'ifb-wm.png',
+            ],
+            [
+                'name' => 'HP Laptop',
+                'price' => '600',
+                'category' => 'Computer',
+                'description' => 'Some Description.',
+                'gallery' => 'hp-l.png',
+            ]
         ]);
     }
 }
