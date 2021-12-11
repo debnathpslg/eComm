@@ -37,5 +37,19 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
+        <div class="trending-wrapper">
+            <h3>Trending Wrapper</h3>
+            @php ($i=0)
+            @foreach ($products as $item)
+            <div class="trending-item">
+                <img src="{{asset('/storage/images/'.$item['gallery'])}}" alt="{{$item['name']}}" class="trending-image">
+                <div class="">
+                    <h3>{{$item['name']}}</h3>
+                </div>
+            </div>
+            @php ($i++)
+            @endforeach
+        </div>
     </div>
 @endsection
